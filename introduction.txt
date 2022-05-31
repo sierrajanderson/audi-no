@@ -1,0 +1,41 @@
+A few thoughts: 
+
+Events at work would be way easier with wireless comms. Unfortunately the boss will never go for a commercial system (reasonably so)
+It would also be a neat project to show off when applying for internships. And a distraction from studying for exams (not necessarily a good thing tbh)
+
+
+Some goals / design requirements:
+
+            Cost            |       $10ish per unit, at scale.
+            -----------------------------------------------------------------------------------------------------------------------
+            Range           |       500 - 800m LOS. Depending on the need for certification obvs, this is OSHW & I'm a student.
+                            |       The system should function in a crowded room & I'd expect coverage around the ground floor of
+                            |       where I live / work.
+            -----------------------------------------------------------------------------------------------------------------------
+            Protocol        |       TBD. Some sort of mesh system would be a good idea. A chain topology is not suitable, as it makes
+                            |       the whole thing very fragile. [2]
+            -----------------------------------------------------------------------------------------------------------------------
+            Processor       |       TBD
+            
+            
+And some things that have already been decided:
+
+            Power source    |       LiPoly battery or similar. Minimum 8hr battery life.
+            -----------------------------------------------------------------------------------------------------------------------
+            Connectivity    |       USB C charging built in. Exposed serial port or JTAG for programming. Perhaps both? Should use
+                            |       standard 10pin header for use with a BlackMagic probe. RJ45 could be an option for serial. [1]
+                            |       
+                            |       Headset, Microphone & PTT on 3.5mm jacks. Mini XLR could be explored?
+            -----------------------------------------------------------------------------------------------------------------------
+            UI / UX         |       Ease of use is a top priority. The whole thing should be set and forget. 
+                            |       An OLED display and a rotary encoder / pushbutton can do a lot.
+                            |       Must haves: 
+                            |       Battery indicator w dedicated pushbutton
+                            |       A way to display the band & connection strength if that's important to the protocol chosen
+                            |       "PTT active" display. Control on the unit as well as through the external connector
+            
+
+[1]: Future things to explore: Wired Networking? Could be of interest for wider situations or RF noisy enviroments. Possiblity of a base 
+station for future expansion
+
+[2] I'm taliking out my ass here. No idea what I'm going to use but it'll come down to the chipset chosen / cost / range / licensing / etc etc etc
